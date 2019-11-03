@@ -100,6 +100,15 @@ class acf_field_icon_picker extends acf_field {
 		wp_register_style( 'acf-input-icon-picker', "{$url}assets/css/input.css", array('acf-input'), $version );
 		wp_enqueue_style('acf-input-icon-picker');
 	}
+
+	// Return a URL of the icon instead of just the icon name
+	function format_value($value, $post_id, $field) {
+		if (empty($value)) {
+			return false;
+		}
+
+		return $this->url . $value . '.svg';
+	}
 }
 new acf_field_icon_picker( $this->settings );
 
