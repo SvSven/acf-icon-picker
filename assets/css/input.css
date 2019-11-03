@@ -142,3 +142,22 @@
 	border-radius: 4px;
 	width: 100%;
 }
+
+/* Customized styling */
+.acf-icon-picker__popup {
+	display: flex;
+	flex-direction: column;
+}
+.acf-icon-picker__popup #icons-list {
+	flex-grow: 1;
+	margin-top: 20px;
+	background: #b7b7b7;
+}
+.acf-icon-picker__popup #icons-list li:hover{
+	background-color: #ccc;
+}
+.acf-icon-picker__svg > img {
+	background: #b7b7b7;
+	padding: 5px;
+	box-sizing: border-box;
+}
